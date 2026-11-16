@@ -37,6 +37,7 @@ ambil("form-cari").addEventListener("submit", function (e) {
 // Fitur keluar
 ambil("tombol-keluar").addEventListener("click", function () {
     localStorage.removeItem("masuk");
+    location.hash="#/login";
 });
 
 /* FITUR MENU KATALOG */

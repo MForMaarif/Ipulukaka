@@ -52,12 +52,43 @@ format("truetype");
     --merah-muda: #fdecea;
     --radius: 12px;
     --bayangan: 0 1px 4px rgba(62, 39, 35, 0.1);
-    --kuning-tua: #e64a3a;
-    --kuning: #e64a3a;
-    --kuning-muda: #ffb834;
-    --kuning-header: #dc143c;
-    --kuning-th: #1a1a1a;
-    --kuning-teks: #ffffff;
+    /* Area header */
+    --kuning-warm: #FEF08A;
+    --coklat-tua: #291811;
+    --keemasan: #B45309;
+    --coklatkuning: #D97706;
+    --abuabu: #78716C;
+    /* Background */
+    --putihwarm: #FFFDF5;
+    /* Tombol Header */
+    --kuningtombol: #FEF3C7;
+    --tekstombol: #291811;
+    /* Tombol Cari */
+    --tombolcari: #D97706;
+    --tekscari: #FFFFFF;
+    --carihover: #B45309;
+    /* Tombol Header Hover */
+    --kuningth: #F59E0B;
+    --teksth: #FFFFFF;
+    /* Lencana */
+    --lencana: #DC2626;
+    --tekslencana: #FFFFFF;
+    /* Kartu menu */
+    --backgroundkartu: #FFFFFF;
+    --borderkartu: #FDE047;
+    --teksumum: #78716C;
+    --teksnama: #291811;
+    --teksharga: #DC2626;
+    /* kartu menu hover */
+    --backgroundhover: #FFFDF5;
+    --bingkai: #FDE047;
+    --harga: #DC2626;
+    --nama: #291811;
+    /* Footer */
+    --teksdesk: #3F2C22;
+    /* Tombol */
+    --tombolutama: #DC2626;
+    --tutamahover: #B91C1C;
 }
 
 /* === FITUR GAYA DASAR === */
@@ -80,7 +111,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
     color: var(--teks);
-    background-color: antiquewhite;
+    background: var(--putihwarm);
    
 }
 
@@ -168,10 +199,9 @@ main.wadah {
     gap: 6px;
     min-height: 40px;
     padding: 8px 16px;
-    border: 1px solid var(--hijau);
     border-radius: 8px;
-    background: var(--putih);
-    color: var(--hijau);
+    background: var(--tombolutama);
+    color: var(--putih);
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
@@ -179,19 +209,16 @@ main.wadah {
 }
 
 .tombol:hover {
-    background: var(--krem-tua);
+    background: var(--tutamahover);
 }
 
 .tombol-utama {
-    border-color: var(--kuning);
-    background: var(--kuning);
+    background: var(--tombolutama);
     color: var(--putih);
 }
 
 .tombol-utama:hover {
-    background: var(--kuning-muda);
-    color: var(--hijau-tua);
-    border: 1px solid var(--hijau-tua);
+    background: var(--tutamahover)
 }
 
 .tombol-lebar {
@@ -280,9 +307,9 @@ main.wadah {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: #dc143c;
+    background: var(--kuning-warm);
     color: var(--krem);
-    border-bottom: 2px solid var(--kuning-th);
+    border-bottom: 2px solid var(--keemasan);
     box-shadow: var(--bayangan);
 }
 
@@ -309,11 +336,11 @@ main.wadah {
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    background: var(--kuning-teks);
+    background: var(--keemasan);
 }
 
 .logo-nama {
-    color: var(--hijau-tua);
+    color: var(--coklat-tua);
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -325,9 +352,10 @@ main.wadah {
     flex: 1 1 100%;
     gap: 4px;
     padding: 4px;
-    border: 2px solid var(--putih);
+    border: 2px solid var(--coklatkuning);
     border-radius: 10px;
     background: var(--putih);
+    color: var(--coklat-tua);
 }
 
 .cari input {
@@ -356,17 +384,16 @@ main.wadah {
     padding: 6px 16px;
     border: 0;
     border-radius: 8px;
-    background: var(--kuning);
-    color: var(--kuning-teks);
+    background: var(--tombolcari);
+    color: var(--tekscari);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
 }
 
 .tombol-cari:hover {
-    background: var(--kuning-muda);
-    border: 1px solid var(--hijau-tua);
-    color: var(--kuning-th);
+    background: var(--carihover);
+    border: 1px solid var(--tombolcari);
 }
 
 /* === FITUR NAVIGASI DAN  KERANJANG === */
@@ -383,8 +410,8 @@ main.wadah {
     gap: 6px;
     padding: 8px 12px;
     border-radius: 8px;
-    background: var(--kuning);
-    color: var(--kuning-teks);
+    background: var(--kuningtombol);
+    color: var(--tekstombol);
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
@@ -393,17 +420,17 @@ main.wadah {
 
 .navigasi a:hover,
 .navigasi button:hover {
-    color: var(--kuning-th);
-    border: 1px solid var(--hijau-tua);
-    background: var(--kuning-muda);
+    color: var(--teksth);
+    border: 1px solid var(--kuningth);
+    background: var(--kuningth);
 }
 
 .lencana {
     min-width: 20px;
     padding: 0 6px;
     border-radius: 999px;
-    background: var(--kuning-muda);
-    color: var(--krem);
+    background: var(--lencana);
+    color: var(--tekslencana);
     font-size: 0.75rem;
     font-weight: 700;
     line-height: 20px;
@@ -509,19 +536,20 @@ body[data-halaman="login"] [data-nav="login"] {
 }
 
 .kartu {
-    border: 2px solid var(--kuning-header);
+    border: 2px solid var(--borderkartu);
     display: flex;
     flex-direction: column;
     min-width: 0;
     border-radius: 10px;
-    background: var(--putih);
+    background: var(--backgroundkartu);
     overflow: hidden;
     box-shadow: var(--bayangan);
 }
 
 .kartu:hover {
-    box-shadow: 0px 10px 0px rgba(62, 39, 35, 0.18);
+    box-shadow: 0px 10px 24px rgba(62, 39, 35, 0.18);
     transform: translateY(-5%);
+    background: var(--backgroundhover);
 }
 
 .kartu-tautan {
@@ -532,7 +560,7 @@ body[data-halaman="login"] [data-nav="login"] {
 
 .kartu-gambar {
     border: var(--kuning-header);
-    background: var(--kuning-teks);
+    background: var(--bingkai);
     position: relative;
     aspect-ratio: 1 / 0.9;
     padding: 10px;
@@ -569,6 +597,7 @@ body[data-halaman="login"] [data-nav="login"] {
     font-size: 0.8rem;
     font-weight: 500;
     line-height: 1.35;
+    color: var(--nama);
 }
 
 .kartu-catatan {
@@ -577,12 +606,11 @@ body[data-halaman="login"] [data-nav="login"] {
     margin-top: 6px;
     padding: 1px 8px;
     border-radius: 6px;
-    color: #000;
+    color: var(--teksumum);
     font-size: 0.65rem;
 }
 
 .kartu-bawah {
-    -webkit-text-fill-color: var(--kuning-teks);
     background: var(--kuning-header);
     display: flex;
     align-items: flex-end;
@@ -593,6 +621,7 @@ body[data-halaman="login"] [data-nav="login"] {
 }
 
 .harga {
+    color: var(--harga);
     font-size: 0.95rem;
     font-weight: 700;
 }
@@ -713,21 +742,19 @@ body[data-halaman="login"] main.wadah {
 
 /* === FITUR TOMBOL MASUK DAN KEMBALI KE KATALOG === */
 .masuk-form .tombol-kirim {
-    background: var(--kuning-header);
+    background: var(--tombolutama);
     margin-top: 12px;
     min-height: 52px;
-    color: var(--putih);
+    color: var(--teksth);
 }
 
 .masuk-form:hover .tombol-kirim:hover {
-    background: var(--kuning-muda);
-    border: 1px solid var(--hijau-tua);
-    color: var(--kuning-th);
+    background: var(--tutamahover);
 }
 
 .masuk-kembali {
     margin-top: 20px;
-    color: var(--kuning-header);
+    color: var(--tombolutama);
     font-size: 0.9rem;
     text-align: center;
 }
@@ -918,18 +945,17 @@ background: var(--krem);
     flex-shrink: 0;
     min-height: 52px;
     padding: 8px 22px;
-    border: 2px solid var(--kuning);
     border-radius: 999px;
+    border: 2px solid var(--tombolutama);
     background: var(--putih);
-    color: var(--kuning);
+    color: var(--tombolutama);
     font-weight: 600;
     cursor: pointer;
 }
 
 .tombol-keranjang:hover:not(:disabled) {
-    background-color: var(--kuning-muda);
-    color: var(--hijau-tua);
-    border: 1px solid var(--hijau-tua);
+    background-color: var(--tombolutama);
+    color: var(--putih);
 }
 
 .tombol-keranjang:disabled {
@@ -949,16 +975,14 @@ background: var(--krem);
     padding: 8px 24px;
     border: 0;
     border-radius: 999px;
-    background: var(--kuning);
+    background: var(--tombolutama);
     column-rule: var(--putih);
     font-weight: 600;
     cursor: pointer;
 }
 
 .tombol-pesan:hover:not(:disabled) {
-    background: var(--kuning-muda);
-    border: 1px solid var(--hijau-tua);
-    color: var(--hijau-tua);
+    background: var(--tutamahover);
 }
 
 .tombol-pesan:disabled {
@@ -985,7 +1009,7 @@ background: var(--krem);
 .baris-keranjang {
     display: grid;
     grid-template-columns: 56px 1fr;
-    gap: 6px 12px;
+    gap: 8px 12px;
     align-items: center;
     padding: 12px;
     border: 1px solid var(--garis);
@@ -1027,6 +1051,7 @@ background: var(--krem);
 }
 
 .baris-subtotal {
+    margin-left: auto;
     font-weight: 700;
 }
 
@@ -1037,7 +1062,7 @@ background: var(--krem);
     gap: 4px;
 }
 
-.pengaturan-jumlah button {
+.pengatur-jumlah button {
     width: 38px;
     min-height: 38px;
     padding: 0;
@@ -1050,7 +1075,7 @@ background: var(--krem);
     cursor: pointer;
 }
 
-.pengaturan-jumlah button:hover:not(:disabled) {
+.pengatur-jumlah button:hover:not(:disabled) {
     background: var(--krem-tua);
 }
 
@@ -1060,7 +1085,7 @@ background: var(--krem);
     cursor: not-allowed;
 }
 
-.pengaturan-jumlah span {
+.pengatur-jumlah span {
     min-width: 28px;
     text-align: center;
     font-weight: 700;
@@ -1166,7 +1191,7 @@ background: var(--krem);
 }
 
 /*Daftar Barang*/
-.daftar-ringkas .pengaturan-jumlah button,
+.daftar-ringkas .pengatur-jumlah button,
 .daftar-ringkas .tombol-teks {
     display: none;
 }
@@ -1232,9 +1257,9 @@ background: var(--krem);
 /* TATA LETAK FOOTER */
 .kaki {
     padding: 28px 0 16px;
-    border-top: 2px solid var(--kuning-th);
-    background: var(--kuning-header);
-    color: #e4dfda;
+    border-top: 2px solid var(--coklatkuning);
+    background: var(--kuning-warm);
+    color: var(--teksdesk);
     font-size: 0.8rem;
 }
 
@@ -1248,7 +1273,7 @@ background: var(--krem);
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    color: var(--hijau-tua);
+    color: var(--coklat-tua);
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -1257,7 +1282,7 @@ background: var(--krem);
     width: 40px;
     height: 40px;
     border-radius: 9px;
-    background: var(--krem);
+    background: var(--coklatkuning);
 }
 
 /* JUDUL DAN DAFTAR INFO */
@@ -1266,7 +1291,7 @@ background: var(--krem);
     align-items: center;
     gap: 8px;
     margin-bottom: 10px;
-    color: var(--putih);
+    color: var(--coklat-tua);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.04rem;
@@ -1289,7 +1314,7 @@ background: var(--krem);
 }
 
 .kaki-daftar dd {
-    color: var(--putih);
+    color: var(--coklat-tua);
     font-weight: 600;
 }
 
@@ -1318,8 +1343,7 @@ background: var(--krem);
 .kaki-hakcipta {
     margin-top: 24px;
     padding-top: 16px;
-    border-top: 1px solid var(--kuning-tua);
-    color: var(--kuning-teks);
+    border-top: 1px solid var(--coklatkuning);
     font-size: 0.75rem;
     text-align: center;
 }

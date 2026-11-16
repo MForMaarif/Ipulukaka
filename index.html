@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="AL MAESTRO KEBAB & BURGER">
     <title>Katalog - AL MAESTRO KEBAB & BURGER</title>
-    <link rel="icon" type="image/png" href="Logo Toko.png">
+    <link rel="icon" type="image/png" href="Logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,7 +18,7 @@
         <div class="wadah kepala-isi">
             <!-- Fitur Logo -->
             <a href="#/" class="logo" aria-label="AL MAESTRO KEBAB & BURGER, ke halaman katalog">
-                <img src="Logo Toko.png" alt="" width="44" height="44">
+                <img src="Logo.png" alt="" width="44" height="44">
                 <span class="logo-nama">AL MAESTRO KEBAB & BURGER</span>
             </a>
 
@@ -169,12 +169,14 @@
                     <p></p>
                 </div>
                 <div class="baris-aksi">
-                    <button type="button" data-aksi="kurang" aria-label="Kurangi jumlah">-</button>
-                    <span class="jumlah"></span>
-                    <button type="button" data-aksi="tambah" aria-label="Tambah jumlah">+</button>
+                    <div class="pengatur-jumlah">
+                        <button type="button" data-aksi="kurang" aria-label="Kurangi jumlah">-</button>
+                        <span class="jumlah"></span>
+                        <button type="button" data-aksi="tambah" aria-label="Tambah jumlah">+</button>
+                    </div>
+                    <p class="baris-subtotal"></p>
+                    <button type="button" class="tombol-teks" data-aksi="hapus">Hapus</button>
                 </div>
-                <p class="baris-subtotal"></p>
-                <button type="button" class="tombol-teks" data-aksi="hapus">Hapus</button>
             </article>
         </template>
         <!-- MENU LOGIN -->
@@ -182,13 +184,13 @@
             <div class="masuk">
                 <!-- Fitur foto login -->
                  <div class="masuk-visual">
-                    <img src="/Toko2.jpeg" alt="">
+                    <img src="Toko2.jpeg" alt="">
                  </div>
 
                  <!-- Fitur formulir masuk -->
                   <form class="masuk-form" id="form-login">
                     <!-- Fitur logo dan judul login -->
-                     <img class="masuk-logo" src="Logo Toko.png" alt="AL MAESTRO KEBAB & BURGER" width="72" height="72">
+                     <img class="masuk-logo" src="Logo.png" alt="AL MAESTRO KEBAB & BURGER" width="72" height="72">
                      <h1>Selamat datang</h1>
                      <p class="masuk-info">Masuk untuk melanjutkan</p>
 
@@ -202,7 +204,7 @@
                      <div class="kolom-isian">
                         <!-- Fitur isi passworddan pesan login salah -->
                          <label for="isian-password">Password</label>
-                         <input type="text" id="isian-password" autocomplete="current-password" required>
+                         <input type="password" id="isian-password" autocomplete="current-password" required>
                          <p class="pesan-galat">Username wajib diisi.</p>
                          <p class="pesan-galat" id="login-salah" hidden>Username atau password salah.</p>
                      </div>
@@ -260,10 +262,10 @@
 
                     <!-- Fitur tambah ke keranang -->
                      <div class="detail-aksi">
-                        <button type="button" class="tombol-keranjang" id="tombol-keranjang">Tombol ke keranjang</button>
+                        <button type="button" class="tombol-keranjang" id="tombol-keranjang">Masukkan keranjang</button>
                         <button type="button" class="tombol-pesan" id="tombol-pesan">
                             <span class="total-teks"></span>
-                            <span>Pesan sekarang</span>
+                            <span>Checkout</span>
                         </button>
                      </div>
                 </div>
@@ -290,7 +292,7 @@
                     <div class="struk-baris"><span>Jumlah Barang</span><span id="keranjang-jumlah">0</span></div>
                     <div class="struk-baris struk-total"><span>Total harga</span><span id="keranjang-subtotal">Rp0</span></div>
                     <div class="struk-aksi">
-                        <a class="tombol tombol-utama" href="#/checkout">Lanjut ke checkout</a>
+                        <a class="tombol tombol-utama" href="#/checkout">Checkout</a>
                         <a class="tombol" href="#/">Lanjut belanja</a>
                     </div>
                 </aside>
@@ -379,7 +381,7 @@
 
             <div class="sukses" id="isi-sukses">
                 <!--pesanan berhasil dibuat-->
-                <div class="sukses-ikon" aria-hidden="true">🍔</div>
+                <div class="sukses-ikon" aria-hidden="true">🎉🥳</div>
                 <h1>Pesanan berhasil dibuat!</h1>
                 <p id="sukses-pemesan"></p>
                 <!--rincian pesanan-->
@@ -402,7 +404,7 @@
                 <!-- Fitur profil kedai -->
                 <section>
                     <p class="kaki-logo">
-                        <img src="Logo Toko.png" alt="" width="40" height="40">
+                        <img src="Logo.png" alt="" width="40" height="40">
                         AL MAESTRO KEBAB & BURGER
                     </p>
                     <p>AL MAESTRO KEBAB & BURGER, menyajikan aneka kebab dan burger berkualitas tinggi untuk memanjakan lidah Anda. Premium, harga hemat, rasa nikmat dalam setiap gigitan!</p>
@@ -437,26 +439,6 @@
             <p class="kaki-hakcipta">&copy; 2026 UKKPPLG</p>
         </div>
     </footer>
-
-    <!-- TEMPLATE BARIS BARANG -->
-    <template id="template-baris">
-        <article class="baris-keranjang">
-            <div class="baris-gambar"><img class="foto" src="" alt=""></div>
-            <div class="baris-info">
-                <a href="#/"></a>
-                <p></p>
-            </div>
-            <div class="baris-aksi">
-                <div class="pengatur-jumlah">
-                    <button type="button" data-aksi="kurang" aria-label="Kurangi jumlah">-</button>
-                    <span class="jumlah"></span>
-                    <button type="button" data-aksi="tambah" aria-label="Tambah jumlah">+</button>
-                </div>
-                <p class="baris-subtotal"></p>
-                <button type="button" class="tombol-teks" data-aksi="hapus">Hapus</button>
-            </div>
-        </article>
-    </template>
     <script src="script.js"></script>
 </body>
 
