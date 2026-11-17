@@ -64,6 +64,16 @@ ambil("halaman-katalog").addEventListener("change", tampilkanKatalog);
 //Fitur log
 const USERNAME = "yuyus";
 const PASSWORD = "1111";
+const inputPassword = ambil("isian-password");
+const tombolPassword = ambil("tombol-password");
+
+tombolPassword.addEventListener("click", function () {
+  const terlihat = inputPassword.type === "password";
+  inputPassword.type = terlihat ? "text" : "password";
+  this.setAttribute("aria-label", terlihat ? "Sembunyikan password" : "Tampilkan password");
+  this.setAttribute("title", terlihat ? "Sembunyikan password" : "Tampilkan password");
+  this.setAttribute("aria-pressed", String(terlihat));
+});
 //Fitur log, after comeback katalog
 ambil("form-login").addEventListener("submit", function (e) {
     e.preventDefault();
